@@ -1,14 +1,14 @@
 import { TurnedInNot } from '@mui/icons-material'
 import { Box, Divider, Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material'
 
-export const Sidebar = ({ drawerWidth }) => {
+export const Sidebar = ({ drawerWidth = 240 }) => {
   return (
     <Box
         component='nav'
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
     >
         <Drawer
-            variant='temporary'
+            variant='permanent' // temporary
             open
             sx={{
                 display: { xs: 'block' },
@@ -17,7 +17,7 @@ export const Sidebar = ({ drawerWidth }) => {
         >
             <Toolbar>
                 <Typography variant='h6' noWrap component='div'>
-                    Prueba
+                    Test
                 </Typography>
             </Toolbar>
             <Divider />
